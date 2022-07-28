@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nodejs-weatherapi-mongodb:
+    image: nodejs-weatherapi-mongodb
+    depends_on:
+      - mongodb
+    ports:
+      - "3456:3456" 
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
